@@ -35,7 +35,7 @@ app.use(
     }
   })
 );
-
+console.log('MONGODB_URI en runtime:', process.env.MONGODB_URI);
 // Conexión a MongoDB
 mongoose
   .connect(process.env.MONGODB_URI)
