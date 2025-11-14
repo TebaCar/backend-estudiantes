@@ -46,6 +46,11 @@ mongoose
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/estudiantes', require('./routes/estudiantesRoutes'));
 
+// Ruta principal para verificar que la API está funcionando
+app.get('/', (req, res) => {
+  res.send('API funcionando correctamente — Backend Estudiantes');
+});
+
 // Manejo de errores genérico
 app.use((err, req, res, next) => {
   console.error('Error no manejado:', err);
